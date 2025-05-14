@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRH Notes Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --heading-color: #2c3e50;
+            --code-bg: #f5f5f5;
+            --blockquote-color: #666666;
+            --blockquote-border: #dddddd;
+            --table-border: #dddddd;
+            --table-header-bg: #f2f2f2;
+            --toggle-bg: #2c3e50;
+            --toggle-text: #ffffff;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --heading-color: #7fb3ff;
+            --code-bg: #2d2d2d;
+            --blockquote-color: #aaaaaa;
+            --blockquote-border: #444444;
+            --table-border: #444444;
+            --table-header-bg: #2d2d2d;
+            --toggle-bg: #7fb3ff;
+            --toggle-text: #1e1e1e;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 90%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 1200px) {
+            body {
+                max-width: 1200px;
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--heading-color);
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--blockquote-border);
+            padding-left: 15px;
+            color: var(--blockquote-color);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid var(--table-border);
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+        }
+
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            background-color: var(--toggle-bg);
+            color: var(--toggle-text);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000;
+        }
+/* Add this to your CSS */
+.section-divider {
+  border: 2px solid var(--heading-color);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 40px 0;
+  text-align: center;
+  background-color: var(--code-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .section-divider {
+  border-color: #7fb3ff;
+  background-color: rgba(127, 179, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(127, 179, 255, 0.2);
+}
+
+/* Optional: Add decorative elements */
+.section-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--heading-color), transparent);
+}
+
+[data-theme="dark"] .section-divider::before {
+  background: linear-gradient(90deg, #7fb3ff, transparent);
+}
+
+/* For your HTML structure */
+.section-divider h2 {
+  margin: 0;
+  color: var(--heading-color);
+  font-size: 1.5em;
+}
+
+[data-theme="dark"] .section-divider h2 {
+  color: #7fb3ff;
+}
+    </style>
+    
+</head>
+<body>
+    <button id="theme-toggle">Toggle Dark Mode</button>
+    <div id="content"></div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Set initial theme
+        if (prefersDarkScheme.matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = 'Toggle Light Mode';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                themeToggle.textContent = 'Toggle Dark Mode';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = 'Toggle Light Mode';
+            }
+        });
+
+        // Function to fetch and render the markdown file
+        async function loadMarkdown() {
+            try {
+                // Use relative path to your GRH.md file
+                const response = await fetch('GRH.md');
+                if (!response.ok) {
+                    throw new Error('Failed to load markdown file');
+                }
+                const markdown = await response.text();
+                document.getElementById('content').innerHTML = marked.parse(markdown);
+            } catch (error) {
+                document.getElementById('content').innerHTML = 
+                    `<p style="color: red;">Error loading file: ${error.message}</p>`;
+                console.error(error);
+            }
+        }
+
+        // Load the markdown when the page loads
+        window.onload = loadMarkdown;
+    </script>
+</body>
+</html>
