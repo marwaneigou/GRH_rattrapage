@@ -565,3 +565,98 @@ La QVT, c'est tout ce qui rend la vie au travail plus agréable, plus sûre et p
 **Le saviez-vous ?** Une bonne QVT peut réduire le turnover de 30% ! 🚀
 
 *(PS : Un employé qui se sent bien travaille mieux… et ça se voit !)*
+
+Voici une synthèse professionnelle des principaux éléments de la **Gestion Administrative du Personnel (GAP)** tirés du document :
+
+---
+
+<div class="section-divider">
+  <h2>8) Gestion Administrative du Personnel</h2>
+</div>
+
+### **1. Définition et Objectifs de la GAP**  
+La GAP vise à **assurer la conformité légale et administrative** des processus RH, contrairement à la GRH qui se concentre sur la performance et la motivation.  
+- **Tâches clés** :  
+  - Gestion des contrats (CDD, CDI, CTT)  
+  - Paie et déclarations sociales (CNSS, mutuelle)  
+  - Suivi des dossiers du personnel  
+  - Gestion des départs (licenciement, démission)  
+
+---
+
+### **2. Contrats de Travail**  
+| **Type** | **Durée** | **Renouvellement** | **Rupture** |  
+|----------|-----------|-------------------|-------------|  
+| **CDD**  | Limitée (max 1 an) | 1 fois possible | À l'échéance ou motif exceptionnel |  
+| **CDI**  | Illimitée | Non applicable | Préavis selon ancienneté |  
+| **CTT**  | Court terme | Flexible | Selon termes du contrat |  
+
+**Clauses essentielles** :  
+- Intitulé du poste, salaire, période d'essai  
+- Confidentialité, non-concurrence, mobilité  
+
+---
+
+### **3. Formalités d'Embauche**  
+- **Déclaration CNSS** : Obligatoire avant le 1er jour de travail.  
+- **Registre du personnel** : Contient les infos légales (nom, poste, dates).  
+- **Mutuelle (AMO)** : Cotisation partagée employeur/salarié.  
+
+---
+
+### **4. Suivi du Personnel**  
+- **Paie** :  
+  - Heures supplémentaires majorées (25% à 100% selon horaires).  
+  - Durée légale : 44h/semaine (Maroc).  
+- **Absences/Congés** :  
+  - Maladie (certificat médical), congés payés (1,5 jour/mois).  
+
+- **Dossier du personnel** :  
+  - Centralise contrats, paie, formations, évaluations.  
+  - Doit respecter la **loi marocaine sur la protection des données** (CNDP).  
+
+---
+
+### **5. Départ du Personnel**  
+- **Licenciement** :  
+  - **Fautes graves** (vol, violence) : Licenciement sans indemnité.  
+  - **Fautes simples** : Sanctions progressives (avertissement, blâme).  
+  - **Indemnité** : Calculée en heures de salaire/an d’ancienneté (ex: 100h/an).  
+
+- **Démission** :  
+  - Préavis : 8 jours à 3 mois selon ancienneté.  
+  - Droits : Solde de tout compte, certificat de travail.  
+
+---
+
+### **6. Relations RH**  
+- **Internes** :  
+  - **Délégués du personnel** (obligatoire si ≥11 salariés).  
+  - **Comité d’entreprise** (si ≥50 salariés).  
+- **Externes** :  
+  - **Inspecteur du travail** : Vérifie la conformité légale.  
+  - **Médecin du travail** : Surveillance santé des salariés.  
+
+---
+
+### **7. Organismes Sociaux**  
+- **CNSS** : Assurance maladie, retraite.  
+- **CIMR** : Régime complémentaire de retraite.  
+
+---
+
+### **Conclusion**  
+La GAP est **le socle administratif** qui garantit la conformité légale et la traçabilité des actions RH. Elle repose sur :  
+1. Une gestion rigoureuse des contrats et dossiers.  
+2. Un dialogue social structuré (délégués, comités).  
+3. Une collaboration avec les organismes sociaux (CNSS, CIMR).  
+
+**Pour aller plus loin** :  
+- Consulter les articles du Code du travail marocain cités (ex: Art. 34, 37, 201).  
+- Digitaliser les processus (dossiers électroniques) pour gagner en efficacité.  
+
+Ce cadre permet aux entreprises d’éviter les risques juridiques tout en sécurisant les droits des salariés.  
+
+--- 
+
+*Source : Présentation GAP - ENSET Mohammedia (Encadré par Mme. Berrada Allam, 2025).*
